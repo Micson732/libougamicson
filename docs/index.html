@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <title>Portfolio Y</title>
+</head>
+<body>
+    <div class="background-container">
+
+    
+        <div class="container">
+            <nav class="entete">
+                <div class="logo"><span><b class="1">|</b>CHOICE<b>-</b>CODE<b>|</b></span></div>
+                <ul class="menu"> <!-- Changement de div en ul pour respecter la sémantique -->
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Compétences</a></li>
+                <li><a href="#">À Propos</a></li>
+                <li><a href="#">Contact</a></li>
+                </ul>
+            <div class="reseaux">
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+            </nav> 
+            <div class="corps">
+            <div class="Cgauche">
+                <span class="textB">Salut</span>
+                <h1>Je suis <span id="textDefil"></span></h1>
+                <p>
+                    Étudiant en Génie Informatique à l'Institut Universitaire de Technologie de Douala |
+                    En cours d'apprentissage des différents langages de programmation et aspirant devenir IT & Security Engineer |  
+                    Full Stack.
+                </p>
+                <div class="btn2">
+                    <button>Télécharger CV</button>
+                    <button>Voir Portfolio</button>
+                </div>
+            </div>
+            <div class="Cdroit">
+                <div class="groupImg">
+                    <img src="images/IMG-20231030-WA0066__1_-removebg-preview.png" alt="idspl">
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </div>
+    <!-- Typed.js for text animation -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#textDefil', {
+            strings: ["NKOT LIBOUGA MICSON !", "Développeur Web !", "Programmeur!"],
+            loop: true,
+            startDelay: 200,
+            backSpeed: 150,
+            typeSpeed: 100,
+        });
+    </script>
+</body>
+</html>

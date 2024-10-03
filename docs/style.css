@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap"); 
+
+:root {
+    --my-color-gris: #f3f5f8;
+    --my-color-gris-fonce: #3d535f;
+    --my-color-jaune: #ffe800;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type:none ;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+body {
+    overflow-x: hidden;
+}
+/* Appliquer l'image de fond */
+.background-container {
+    background-image: url('chemin/vers/ton-image.jpg');
+    background-size: cover; /* L'image couvre tout l'élément */
+    background-position: center; /* Centrer l'image */
+    background-repeat: no-repeat; /* Empêcher la répétition de l'image */
+    height: 100vh; /* Hauteur du conteneur égale à la hauteur de la fenêtre */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Couleur du texte */
+    text-align: center;
+}
+
+/* Style du texte */
+h1, p {
+    z-index: 1;
+} /* Assure que le texte est au-dessus de l'image */
+
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--my-color-gris);
+}
+
+.entete {
+    display:flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    height: 80px;
+    /*background-color: rgba(252, 252, 252, 0.8);*/
+    z-index: 111;
+    position: sticky;
+    top: 0;
+    line-height: 60px;
+    box-shadow:0 15px 10px rgb(0, 0, 0,0.4);
+}
+
+.logo {
+    display: flex;
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--my-color-gris-fonce);
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow:0 15px 10px rgb(0, 0, 0,0.4);
+}
+
+b {
+    font-size: 55px;
+    color: var(--my-color-jaune);
+}
+.logo span{
+    color: var(--my-color-gris-fonce);
+}
+
+.menu {
+    display:flex;
+    gap: 20px;
+}
+/*.menu li{
+    margin: 0 1px;
+}*/
+
+.menu li a {
+    font-size: 18px;
+    color: var(--my-color-gris-fonce);
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+    letter-spacing: none;
+}
+
+.menu li:hover a {
+    color: var(--my-color-jaune);
+}
+
+.reseaux a {
+    font-size: 25px;
+    color: var(--my-color-gris-fonce);
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.reseaux a:hover {
+    color: var(--my-color-jaune);
+}
+
+.corps {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 5%;
+    height: calc(100vh - 80px);
+    background: rgba(255, 255, 255, 0.8);
+    position: relative;
+    overflow: hidden;
+}
+
+.Cgauche, .Cdroit {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.textB {
+    font-size: 28px;
+    color: var(--my-color-gris-fonce);
+    letter-spacing: 5px;
+    position: relative;
+    display: inline-block;
+}
+
+.textB::after {
+    content: '';
+    display: block;
+    width: 45px;
+    height: 4px;
+    background-color: var(--my-color-jaune);
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 10px;
+    position: relative;
+}
+
+h1 {
+    font-size: 10px;
+    font-weight: 900;
+    color: var(--my-color-gris-fonce);
+    margin: 20px 0;
+    position: relative;
+}
+
+p {
+    font-size: 1.1em;
+    color: var(--my-color-gris-fonce);
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: justify;
+    font-weight: 400;
+    position: relative;
+}
+
+.btn2 {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+button {
+    outline: none;
+    font-size: 15px;
+    font-weight: 300;
+    color: white;
+    background-color: var(--my-color-gris-fonce);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 40px 5px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    box-shadow:0 15px 10px rgb(0, 0, 0,0.4);
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--my-color-jaune);
+    color: var(--my-color-gris-fonce);
+}
+
+.groupImg {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.groupImg img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    animation: animateImg 10s linear infinite;
+}
+
+@keyframes animateImg {
+    50% {
+        transform: translate(10px, 15px);
+        right: 30px;
+        top: 45px;
+    }
+}
+
+/* Animations for splash and background elements */
+.groupImg #idspl {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    filter: saturate(200%);
+    width: 160%;
+    animation: animateSplash 5s linear infinite;
+    box-shadow:0 15px 10px rgb(0, 0, 0,0.4) ;
+}
+
+@keyframes animateSplash {
+    50% {
+        right: 37%;
+        top: 60%;
+        width: 155%;
+    }
+}
+
+.corps::before {
+    position: absolute;
+    content: '';
+    height: 98%;
+    width: 95%;
+    -o-border-radius: 30px;
+    background: linear-gradient(45deg, #ffe800, pink);
+    left: 15px;
+    top: 40px;
+    animation: beforeAnime 10s linear infinite;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    border-radius: 30px;
+}
+
+@keyframes beforeAnime {
+    50% {
+        left: -17%;
+        top: 41%;
+    }
+}
+
+/*.corps::after {
+    position: absolute;
+    content: '';
+    height: 150px;
+    width: 150px;
+    border-radius: 90%;
+    background: linear-gradient(45deg, #f3e417, pink);
+    left: 35px;
+    top: 15px;
+    animation: afterAnime 6s linear infinite;
+}
+
+@keyframes afterAnime {
+    50% {
+        left: 27%;
+        top: 10%;
+    }
+}*/
+
+#textDefil{
+    color: #858150;
+    font-size: 25px;
+}
+/* Responsive design */
+@media (min-width: 468px) {
+    .corps {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .Cgauche, .Cdroit {
+        width: 45%;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    /*.btn2 {
+        justify-content: flex-start;
+    }*/
+}
+
+@media (max-width: 1080px) {
+    .entete {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .menu {
+        margin-top: 10px;
+        
+    }
+
+    .menu li a {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 10px;
+    }
+
+    .btn2 button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .groupImg {
+        max-width: 250px;
+    }
+}
